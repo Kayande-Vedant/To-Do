@@ -1,0 +1,35 @@
+.todo-item {
+  display: flex;
+  width: 100%;
+  font-size: 1.3vw;
+  border: 2px solid lightskyblue;
+  padding: 2%;
+  border-radius: 13px;
+  margin: 2%;
+  justify-content: space-between;
+}
+.status {
+  align-items: center;
+}
+.delete-task-item {
+  color: crimson;
+  border: 2px solid orange;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 4vh;
+}
+.dot {
+  height: 1.5vw;
+  width: 1.5vw;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.itemBody {
+  width: 50%;
+}
+.select {
+  height: 4vh;
+}
