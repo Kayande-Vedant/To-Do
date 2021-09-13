@@ -23,16 +23,22 @@ function TodoList(props){
     ,[props.data.listItems]);
 
     function handleDelete(itemData){
+        console.log('DELETE: ', itemData);
         deleteOperation = true;
         // console.log("Delete button pressed :", deleteOperation);
         let localData = JSON.parse(localStorage.getItem('todoData'));
+        console.log('All log data: ',localData);
         for(let i=0;i<localData.length;i++){
             if(localData[i].listId ===props.data.listId){
+                console.log('Got Id match');
                 // console.log(localData[i].listItems.length);
                 for(let j=0;j<localData[i].listItems.length;j++){
                     // console.log('localData[i].listItems[j]: ',localData[i].listItems[j]);
                     // console.log('props.itemData.itemId : ',props.itemData.itemId)
+                    console.log('Id stored: ', localData[i].listItems[j].itemId );
+                    console.log('id looking for: ',itemData.itemId);
                     if(localData[i].listItems[j].itemId === itemData.itemId){
+                        console.log('Got Item Match');
                         // console.log(localData[i].listItems.splice(j,1));
                         localData[i].listItems.splice(j,1);
                         setListItems(localData[i].listItems);

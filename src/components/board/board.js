@@ -74,7 +74,7 @@ let todoData;
                 if(localData[i].listId === listViewId.listId){
                     //setting itemId to new Date coz localData[i].listItems.length gives err in some cases
                     let newItem={
-                        "itemId": new Date(),
+                        "itemId": new Date().toJSON(),
                         "itemBody": event.target[0].value,
                         "itemStatus": event.target[1].value,
                         "date": ''

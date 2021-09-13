@@ -8,13 +8,13 @@ function FormComp(props){
 
     let listForm;
     if(!props.listId){
-        listForm =  (<form onSubmit={(event)=>props.onSubmit(event)}>
+        listForm =  (<form onSubmit={(event)=>{setTextInput('');props.onSubmit(event)}}>
             <input className="input-field" value={textInput} required onChange={(event)=>setTextInput(event.target.value)} placeholder="List Name" type="text"></input>
             <button className="create-btn">Create List</button>
         </form>);
     }
     else{
-        listForm= (<form onSubmit={(event)=>props.onSubmit(event)}>
+        listForm= (<form onSubmit={(event)=>{setTextInput('');props.onSubmit(event)}}>
             <input className="input-field" value={textInput} required onChange={(event)=>setTextInput(event.target.value)} placeholder="To-Do Item" type="text"></input>
             <select className="select-status" value={status} onChange={(event)=>setStatus(event.target.value)}>
                     <option value="todo">To-Do</option>

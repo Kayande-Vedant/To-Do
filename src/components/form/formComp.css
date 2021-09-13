@@ -22,3 +22,13 @@
 .select-status {
   margin-right: 2%;
 }
+
+form {
+  border: 1px solid #4fd5d5;
+  width: 75%;
+  /* justify-content: center; */
+  background-color: #4fd5d5;
+  margin: auto;
+  padding: 1%;
+  border-radius: 8px;
+}
